@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>roaxxxx</title>
+    <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+
+#start-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: opacity 1s ease;
+}
+
+#main-content.hidden {
+    display: none;
+}
+
+.center-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.center-icon img {
+    width: 200px;
+    animation: fadeIn 2s ease forwards;
+    opacity: 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-icons img {
+    width: 50px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+      
+              #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #111;
+            z-index: -1;
+        }
+</style>
+</head>
+<body>
+  <div id="particles-js"></div>
+    <!-- Czarne tło startowe -->
+    <div id="start-screen">
+        <h1>Click to Enter</h1>
+    </div>
+
+    <!-- Główna strona -->
+    <div id="main-content" class="hidden">
+        <div class="center-icon">
+            <img src="https://i.ibb.co/Kh121dV/pobrane-5.png" alt="Main Icon" id="main-icon">
+        </div>
+        <div class="social-icons">
+            <a href="https://open.spotify.com/artist/2i2h5fJ8msuyGhDC7wxl0D?si=jGUZgFJOT9-_yR0sL1xEMw" target="_blank">
+                <img src="https://i.ibb.co/qkBQRBT/Spotify-social-media-logo-by-alfredocreates-1480279059.png" alt="Spotify">
+            </a>
+            <a href="https://instagram.com/ripmike2017" target="_blank">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAADDklEQVR4nO2azU5TQRTHC2UnH+5F3UjVhxAjtD6Coq+A6CuohAT0CdAE0YDuRVE3KO7kw42NqCxxq2hQkTbmZyY90ToZ+nFn2s7Y+SU36eLOOTP/3jP3nDsnlYpEIpFIJJIU4CBwEXgArAAfgSLuKYrtV8B9YAToS7UK4ChwDyjQOvaAWeBIMxfeBUwAu/iDmss4kG704nuABfzlmQrJRsZ6Hv/JOxcBSAOPCQf1JHS5FGCC8Bh3udv/JDx2nbwdgLv4xyPgENAPLFa4b9bFxreHf/SXzfFwhfv2rJIl4AJ+UqsAihEbAebxk0V5/NXin1S5d95GgBXHE38HTALDwAnggFzqdxaYkntckrcRYMvRJFaBoTr8KoHWHPn+aiNA0dK5KpRGgY4EvjuASw7m8MtGABs+A2cSO/87hyGxlZhWCFDYb/HAWeC2xPo3uTaAW0CuggiFkAQYNdg6DrysYewykDGMHwtFgFU95oHTwHYdNtQjP6jZ6ATWQxBgyPDP17P4chEGNFvqVem1ABsGG89JzrLB3nufBZjUxuewZ1izecNnAbLaeLXb2zJtK2ozBcho412ktRuGPcVbAbq18TvYs6PZ7PZZgJ4GCPBPLg/0tlsIvA0pBLJN2ARVKu2tAFMuEpcqidVNnwXYNNhYIjkvQkuETIlLJmE5+wk45iKxarYAa4ZiaLBOEdTiTxmKodchCKAYM9gaqLEuWNL/eRl/hYS0QoCiHgra975p9XqTPGFHfk/v991QNtNiSAIgJbBRhDrnkE1YTv/BxnnRxrGMv6ziN4HvTnnsW/pRdAs3rOtJUhW/uaQbnoEvPh2MfJB6PieHId1ynZQMTyU5mz4djMwTPnP/4+FoPZyzEaDP0+PxWlGNHb2JBVBIH16ozKRsodSJ8Z3w+KGOz60FUEgTYmhcTbmCUlKi+nJCapNLt2uj5JuGNVFTapV9iL88bVirrNY1el02GV9Qc7nW8GbpcqRB6U6L8wT1np8p7xprOpS+05+XtDlvW7pWYVtifE582iU5kUgkEomk2prf6LobULs0wHUAAAAASUVORK5CYII=" alt="Instagram">
+            </a>
+            <a href="mailto:contact@roaxxxx.com">
+                <img src="https://i.ibb.co/dcNLVYv/icons8-email-64.png" alt="Email">
+            </a>
+        </div>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="bg.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+             particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 5,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+      // Pobranie elementów
+      const startScreen = document.getElementById('start-screen');
+      const mainContent = document.getElementById('main-content');
+      const bgMusic = document.getElementById('bg-music');
+
+      // Funkcja po kliknięciu w ekran startowy
+      startScreen.addEventListener('click', () => {
+          startScreen.style.opacity = '0';
+          setTimeout(() => {
+              startScreen.style.display = 'none';
+              mainContent.classList.remove('hidden');
+              bgMusic.play(); // Muzyka odtwarzana po kliknięciu
+          }, 1000);
+      });
+
+      // Upewnienie się, że dźwięk nie odtwarza się bez interakcji użytkownika
+      document.body.addEventListener('click', () => {
+          if (bgMusic.paused) {
+              bgMusic.play(); // Odtwarzanie dźwięku po pierwszej interakcji użytkownika
+          }
+      });
+    </script>
+</body>
+</html>
